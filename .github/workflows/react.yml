@@ -22,10 +22,6 @@ jobs:
         with:
         node-version: ${{matrix.node-version}}
 
-      - run: npm ci
-      - run: npm test
-
-
       - name: Install dependencies
         run: npm install
 
@@ -35,24 +31,5 @@ jobs:
      - name: Build static file
        run: npm run build
      
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
-    #       name: s3-depl
-
-# jobs:
-#  Deploy:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Checkout
-#        uses: actions/checkout@v2
-
-#      - name: Setup node
-#        uses: actions/setup-node@v2
-
-#      - name: Install dependencies
-#        run: npm install
-
-#      - name: Build static file
-#        run: npm run build
 
