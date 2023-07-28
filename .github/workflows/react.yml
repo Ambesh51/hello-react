@@ -4,14 +4,6 @@ on:
   push:
     branches: [deploy]
 
-jobs:
-  build:
-    runs-on: self-hosted
-
-    strategy:
-      matrix:
-        node-version: [18.x]
-
     jobs:
       Deploy:              # Indentation fixed here
         runs-on: ubuntu-latest
