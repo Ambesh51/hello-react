@@ -2,13 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  var temp =100;
-  var temp =100;
-  var temp =100;
-
-  var temp =100;
-
-
+//koko/
+//lplpl
+//lplplplplplpl
   return (
     <div className="App">
       <header className="App-header">
