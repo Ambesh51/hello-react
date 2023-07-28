@@ -2,7 +2,7 @@ name: React CI/CD
 
 on:
   push:
-    branch: [deploy]
+    branches : [deploy]
 
 jobs:
   build:
