@@ -8,17 +8,7 @@ function App() {
 
   var temp =100;
 
-  var temp =100;
 
-
-  var temp =100;
-  var temp =100;
-
-  var temp =100;
-  var temp =100;
-
-  var temp =100;var temp =100;
-  
   return (
     <div className="App">
       <header className="App-header">
