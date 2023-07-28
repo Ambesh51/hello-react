@@ -12,30 +12,47 @@ jobs:
     matrix:
     node-version: [18.x]
 
-    steps:
-    - name: Checkout
-      - uses: actions/checkout@v2
 
-    - name: Setup node
-      - uses: actions/setup-node@v2
+jobs:
+ Deploy:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Checkout
+       uses: actions/checkout@v2
 
-      - run: npm ci
-      - run: npm test
+     - name: Setup node
+       uses: actions/setup-node@v2
 
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: test file
-        run: npm test
+     - name: Install dependencies
+       run: npm install
 
      - name: Build static file
        run: npm run build
-     
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+       
+    # steps:
+    # - name: Checkout
+    #   - uses: actions/checkout@v2
 
-          name: s3-depl
+    # - name: Setup node
+    #   - uses: actions/setup-node@v2
+
+    #   - run: npm ci
+    #   - run: npm test
+
+
+    #   - name: Install dependencies
+    #     run: npm install
+
+    #   - name: test file
+    #     run: npm test
+
+    #  - name: Build static file
+    #    run: npm run build
+     
+    #     env:
+    #       NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+
+    #       name: s3-depl
 
 # on:
 #  push:
